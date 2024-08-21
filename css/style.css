@@ -1,0 +1,105 @@
+/* 基本的なスタイル */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("/img/1.jpg"); /* 背景画像を設定 */
+    background-size: cover; /* 画像を画面全体に表示 */
+    background-position: center; /* 画像を中央に配置 */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* コンテナのスタイル */
+.container {
+    width: 350px;
+    padding: 20px;
+    background-color: #ffffff; /* コンテナの背景色 */
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* タスク入力エリア */
+textarea {
+    width: calc(100% - 20px); /* 左端に寄せるために幅を調整 */
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #00796b;
+    border-radius: 4px;
+    resize: none;
+    box-sizing: border-box;
+}
+
+/* ボタンのスタイル */
+button {
+    width: calc(100% - 22px); /* 左端に寄せるために幅を調整 */
+    padding: 10px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+
+/* タスクリストのスタイル */
+.task-list {
+    max-height: 300px; /* 最大高さを設定 */
+    overflow-y: auto; /* スクロール可能にする */
+    margin-bottom: 20px;
+}
+
+/* タスクアイテムのスタイル */
+.task-item {
+    display: flex;
+    flex-direction: column; /* ボタンを縦に並べる */
+    padding: 10px;
+    background-color: #b2dfdb;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    position: relative; /* ボタンをタスクの下部に配置するために */
+    min-height: 60px; /* タスクの内容に応じて高さを調整 */
+    box-sizing: border-box;
+}
+
+/* タスク内容のスタイル */
+.task-item p {
+    margin: 0;
+    flex-grow: 1; /* ボタンの位置を維持するために、タスク内容を占有 */
+}
+
+/* 対応済みボタンのスタイル */
+.task-item button {
+    width: 100%;
+    margin-top: 5px; /* ボタンの間隔を調整 */
+    background-color: #e57373;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ボタンが横並びにならないように、縦に並べる */
+.task-item button + button {
+    margin-left: 0; /* 横のマージンをゼロに設定 */
+}
+
+.task-item button:hover {
+    background-color: #d32f2f;
+}
+
+/* 対応数表示エリアのスタイル */
+.task-summary {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
