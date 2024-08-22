@@ -1,7 +1,7 @@
 /* 基本的なスタイル */
 body {
     font-family: Arial, sans-serif;
-    background-image: url("/img/1.jpg"); /* 背景画像を設定 */
+    background-image: url("../img/1.jpg"); /* 背景画像を設定 */
     background-size: cover; /* 画像を画面全体に表示 */
     background-position: center; /* 画像を中央に配置 */
     margin: 0;
